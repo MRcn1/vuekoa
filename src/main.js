@@ -4,14 +4,19 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vant from 'vant';
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import {Lazyload} from 'vant';
 import 'vant/lib/index.css';
+import 'swiper/dist/css/swiper.css'
 import axios from 'axios'
 import {post,fetch,patch,put,postImg} from './config/http'
 
-
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 Vue.use(Vant);
-Vue.config.productionTip = false
 
+Vue.use(Lazyload);
+
+Vue.config.productionTip = false
 
 Vue.prototype.$post=post;
 Vue.prototype.$fetch=fetch;
